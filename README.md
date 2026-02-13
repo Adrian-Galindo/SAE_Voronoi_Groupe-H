@@ -138,5 +138,6 @@ L’application est organisée en modules :
 
 Projet réalisé par :
 Adrian GALINDO
+Bharani RATTINASSABABADY 
 
 ---
