@@ -1,3 +1,5 @@
+import { setPointIntoCollection } from "./parsing.js";
+
 let input_coordonnees_manuel = document.getElementById("coordonnees_manuel");
 let message_error_manuel = document.getElementById("message_error_saisie_manuel");
 let affichage_coordonnees_manuel = document.getElementById("affichage_coordonnees_manuel");
@@ -18,7 +20,7 @@ function resetInput() {
 }
 
 // Écouteur d'événements pour l'entrée des coordonnées manuelles
-input_coordonnees_manuel.addEventListener("input", function() {
+input_coordonnees_manuel.addEventListener("input", function(event) {
     let value = input_coordonnees_manuel.value;
 
     // Si l'entrée est vide, désactiver le bouton et réinitialiser les messages
@@ -61,12 +63,25 @@ button_submit_coordonnees_manuel.addEventListener("click", function() {
         let pointX = parseFloat(match[1]);
         let pointY = parseFloat(match[3]);
 
-        // Créer un élément <li> pour afficher le point
-        const li = createBaliseLiByPoint(pointX, pointY);
-        affichage_coordonnees_manuel.appendChild(li);
+        try{
+            // Ajouter le point à la collection de points
+            setPointIntoCollection(pointX, pointY);
 
-        // Réinitialiser le champ et désactiver le bouton
-        resetInput();
+            // Créer un élément <li> pour afficher le point
+            const li = createBaliseLiByPoint(pointX, pointY);
+            affichage_coordonnees_manuel.appendChild(li);
+
+            // Réinitialiser le champ et désactiver le bouton
+            resetInput();
+        }
+        catch (error) {
+            // Réinitialiser le champ et désactiver le bouton
+            resetInput();
+
+            // Afficher une erreur si l'ajout du point échoue (par exemple, si les coordonnées sont hors limites)
+            message_error_manuel.textContent = 'Erreur : ' + error.message;
+        }
+
     } else {
         // Afficher une erreur si le format est incorrect (bien que ce cas soit déjà géré en amont)
         message_error_manuel.textContent = "Erreur : Coordonnées invalides.";
