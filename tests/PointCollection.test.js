@@ -1,5 +1,5 @@
-const PointCollection = require('../src/models/point_collection.js');
-const Point = require('../src/models/Point.js');
+const PointCollection = require('./models/point_collection.js');
+const Point = require('./models/Point.js');
 
 describe('Classe PointCollection', () => {
     let collection;

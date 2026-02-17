@@ -1,6 +1,6 @@
-import Point from "./point.js";
+const Point = require("./Point.js");
 
-export default class PointCollection {
+class PointCollection {
     constructor() {
         this.points = [];
     }
@@ -44,3 +44,5 @@ export default class PointCollection {
         return this.points.map(point => point.toString()).join(', ');
     }
 }
+
+module.exports = PointCollection;

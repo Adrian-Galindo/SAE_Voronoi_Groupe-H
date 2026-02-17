@@ -1,4 +1,4 @@
-export default class Point {
+class Point {
     static id = 1;
 
     constructor(x, y) {
@@ -33,3 +33,5 @@ export default class Point {
         return `(${this.x}, ${this.y})`;
     }
 }
+
+module.exports = Point;

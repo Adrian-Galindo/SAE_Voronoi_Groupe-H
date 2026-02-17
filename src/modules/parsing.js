@@ -1,1 +1,1 @@
-const Point = require("../c/models/Point.js");
+import Point from "../models/Point.js";
