@@ -1,0 +1,1 @@
+let input_coordonnee = document.getElementById("input-coordonnee");
