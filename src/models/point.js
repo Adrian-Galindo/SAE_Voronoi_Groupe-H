@@ -1,5 +1,5 @@
 class Point {
-    static id = 0;
+    static id = 1;
 
     constructor(x, y) {
         this.setX(x);

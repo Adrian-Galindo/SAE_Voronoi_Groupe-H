@@ -2,6 +2,13 @@ const Point = require("../src/models/Point.js");
 
 describe("Classe Point", () => {
 
+    test('Créer une instance de Point', () => {
+        // Arrange & Act
+        const p = new Point(10, 20);
+        // Assert
+        expect(p).toBeInstanceOf(Point);
+    })
+
     test("Création d\'un point avec des entiers positives", () => {
         // Arrange & Act
         const p = new Point(10, 20);
