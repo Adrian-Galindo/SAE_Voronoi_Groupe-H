@@ -22,8 +22,11 @@
 
     <br>
     <label>Fichier de coordonnées :
-        <input type="file" />
+        <input type="file" id="coordonnees_fichier" accept=".txt"/>
     </label>
+
+    <ul id="listePoints"></ul>
+    <p id="messageErreur"></p>
 
     <!-- Lien vers les fichiers JS -->
     <script type="module" src="./src/modules/lecture.js"></script>
