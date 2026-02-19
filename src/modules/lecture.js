@@ -1,4 +1,5 @@
-import {validationSaisiRegex, setPointIntoCollection} from "./parsing.js";
+import {setPointIntoCollection} from "./parsing.js";
+import {validationSaisiRegex} from "../utils/validation.js";
 
 let input_coordonnees_manuel = document.getElementById("coordonnees_manuel");
 let message_error_manuel = document.getElementById("message_error_saisie_manuel");

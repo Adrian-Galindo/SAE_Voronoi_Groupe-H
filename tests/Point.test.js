@@ -9,6 +9,11 @@ describe("Classe Point", () => {
         expect(p).toBeInstanceOf(Point);
     })
 
+    test('Créer une instance de Point avec une seule coordonnée', () => {
+        // Arrange & Act & Assert
+        expect(()=>new Point(10)).toThrow("Point doit être initialisé avec des coordonnées x et y")
+    })
+
     test("Création d\'un point avec des entiers positives", () => {
         // Arrange & Act
         const p = new Point(10, 20);

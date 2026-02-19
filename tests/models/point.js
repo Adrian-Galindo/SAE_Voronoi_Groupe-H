@@ -2,6 +2,9 @@ class Point {
     static id = 1;
 
     constructor(x, y) {
+        if(x === undefined || y === undefined) {
+            throw new Error('Point doit être initialisé avec des coordonnées x et y');
+        }
         this.setX(x);
         this.setY(y);
         this.id = Point.id++;
