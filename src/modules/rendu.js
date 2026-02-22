@@ -1,0 +1,19 @@
+import VoronoiDiagram from "./voronoi.js";
+import {collectionPoints} from "./parsing.js";
+
+export const voronoi = new VoronoiDiagram()
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+export function clearCanva() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+export function getDessinVoronoi() {
+    const points = collectionPoints.getPoints();
+
+    // Calcul
+    voronoi.compute(points, canvas.width, canvas.height);
+    // Dessin
+    voronoi.draw(ctx);
+}

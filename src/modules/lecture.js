@@ -1,5 +1,6 @@
+import {getDessinVoronoi,clearCanva} from "./rendu.js";
 import {clearCollection, setPointIntoCollection} from "./parsing.js";
-import {validationFichier, validationSaisiRegex} from "../utils/validation.js";
+import {validationFichier, validationCoordonneeRegex} from "../utils/validation.js";
 
 let affichage_coordonnees = document.getElementById("affichage_coordonnees");
 
@@ -34,7 +35,7 @@ function lectureCoordonneesManuel() {
             return;
         }
 
-        let match = validationSaisiRegex(value);
+        let match = validationCoordonneeRegex(value);
 
         if (match) {
             // Activer le bouton de soumission si les coordonnées sont valides
@@ -54,7 +55,7 @@ function lectureCoordonneesManuel() {
         // On fait a nouveau une validation pour s'assurer que les coordonnées sont correctes avant de les afficher (possible manipulation de l'utilisateur)
         let value = input_coordonnees_manuel.value;
 
-        let match = validationSaisiRegex(value);
+        let match = validationCoordonneeRegex(value);
 
         if (match) {
             let pointX = parseFloat(match[1]);
@@ -63,6 +64,9 @@ function lectureCoordonneesManuel() {
             try{
                 // Ajouter le point à la collection de points
                 setPointIntoCollection(pointX, pointY);
+
+                // Mettre à jour le dessin du diagramme de Voronoï
+                getDessinVoronoi()
 
                 // Créer un élément <li> pour afficher le point
                 const li = createBaliseLiByPoint(pointX, pointY);
@@ -74,6 +78,7 @@ function lectureCoordonneesManuel() {
             catch (error) {
                 // Réinitialiser le champ et désactiver le bouton
                 resetInputSaisieManuel();
+                clearCanva()
 
                 // Afficher une erreur si l'ajout du point échoue (par exemple, si les coordonnées sont hors limites)
                 message_error_manuel.textContent = 'Erreur : ' + error.message;
@@ -82,6 +87,7 @@ function lectureCoordonneesManuel() {
         } else {
             // Afficher une erreur si le format est incorrect (bien que ce cas soit déjà géré en amont)
             message_error_manuel.textContent = "Erreur : Coordonnées invalides.";
+            clearCanva()
         }
     });
 
@@ -105,7 +111,7 @@ function lectureCoordonneesFichier() {
 
                 const parties = trimmed.split(",");
 
-                let match = validationSaisiRegex(trimmed);
+                let match = validationCoordonneeRegex(trimmed);
 
                 if (!match) {
                     throw Error(`ligne ${index + 1} : format invalide`);
@@ -119,10 +125,14 @@ function lectureCoordonneesFichier() {
                 const li = createBaliseLiByPoint(x, y);
                 affichage_coordonnees.appendChild(li);
             });
+
+            // Mettre à jour le dessin du diagramme de Voronoï
+            getDessinVoronoi()
         }
         catch (error) {
             message_error_fichier.textContent = `Erreur dans le fichier : ${error.message}`;
             clearCollection(affichage_coordonnees)
+            clearCanva()
         }
     }
 

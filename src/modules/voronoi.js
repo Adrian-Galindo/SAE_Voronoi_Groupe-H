@@ -1,7 +1,7 @@
 import { Delaunay } from "https://cdn.skypack.dev/d3-delaunay@6";
 
 // voronoï - coloré selon position
-class VoronoiDiagram {
+export default class VoronoiDiagram {
     constructor() {
         this.points = [];
         this.voro = null;
@@ -13,7 +13,6 @@ class VoronoiDiagram {
 
         const d = Delaunay.from(liste, p => p.x, p => p.y);
         this.voro = d.voronoi([0, 0, w, h]);
-        console.log("ok ça marche, ", liste.length, "points")
     }
 
     draw(ctx) {
@@ -44,5 +43,3 @@ class VoronoiDiagram {
         
     }
 }
-
-export default VoronoiDiagram;
