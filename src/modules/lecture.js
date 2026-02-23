@@ -1,6 +1,6 @@
 import "./export.js"
 import {getDessinVoronoi,clearCanva} from "./rendu.js";
-import {clearCollection, setPointIntoCollection} from "./parsing.js";
+import {clearCollection, collectionPoints, setPointIntoCollection} from "./parsing.js";
 import {validationFichier, validationCoordonneeRegex} from "../utils/validation.js";
 
 let affichage_coordonnees = document.getElementById("affichage_coordonnees");
@@ -187,6 +187,17 @@ function lectureCoordonneesDrop() {
     }
 }
 
+function lectureResetPoint() {
+    const btn_reset_points = document.getElementById("btn_reset_points");
+    btn_reset_points.addEventListener("click", () => {
+        if(collectionPoints.size() === 0) return; // S'il n'y a pas de points, on ne fait rien
+        clearCollection(affichage_coordonnees);
+        clearCanva();
+    });
+}
+
 lectureCoordonneesManuel()
 
 lectureCoordonneesDrop();
+
+lectureResetPoint()

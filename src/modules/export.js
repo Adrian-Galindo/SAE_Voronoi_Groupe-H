@@ -16,5 +16,5 @@ export function exportCanvasPNG() {
 }
 
 function isCanvasEmpty() {
-    return collectionPoints.getPoints().length === 0;
+    return collectionPoints.size() === 0;
 }
