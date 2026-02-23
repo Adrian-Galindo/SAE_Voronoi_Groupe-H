@@ -61,45 +61,54 @@ function lectureCoordonneesManuel() {
 
     // Écouteur pour le bouton de soumission des coordonnées
     button_submit_coordonnees_manuel.addEventListener("click", function() {
-        // On fait a nouveau une validation pour s'assurer que les coordonnées sont correctes avant de les afficher (possible manipulation de l'utilisateur)
+        // On récupère la valeur saisie
         let value = input_coordonnees_manuel.value;
 
-        let match = validationCoordonneeRegex(value);
+        // On vérifie le format global
+        if (validationCoordonneeRegex(value)) {
+            
+            // Découpage de la chaine par les points virgules pour gérer plusieurs points à la fois
+            let tableauPoints = value.split(';');
 
-        if (match) {
-            let pointX = parseFloat(match[1]);
-            let pointY = parseFloat(match[3]);
+            try {
+                //bouclage sur chaque coordonnée trouvée
+                for(let i=0; i<tableauPoints.length; i++) {
+                    let pointStr = tableauPoints[i].trim();
+                    
+                    // on resépare par la virgule pour avoir X et Y
+                    let coord = pointStr.split(',');
+                    
+                    let pointX = parseFloat(coord[0]);
+                    let pointY = parseFloat(coord[1]);
 
-            try{
-                // Ajouter le point à la collection de points
-                setPointIntoCollection(pointX, pointY);
+                    
+                    setPointIntoCollection(pointX, pointY);
 
-                // Mettre à jour le dessin du diagramme de Voronoï
-                getDessinVoronoi()
+                    // Affichage dans la liste HTML
+                    const li = createBaliseLiByPoint(pointX, pointY);
+                    affichage_coordonnees.appendChild(li);
+                }
 
-                // Créer un élément <li> pour afficher le point
-                const li = createBaliseLiByPoint(pointX, pointY);
-                affichage_coordonnees.appendChild(li);
+                
+                getDessinVoronoi();
 
-                // Réinitialiser le champ et désactiver le bouton
+                // vidage du champ
                 resetInputSaisieManuel();
-            }
-            catch (error) {
-                // Réinitialiser le champ et désactiver le bouton
-                resetInputSaisieManuel();
-                clearCanva()
 
-                // Afficher une erreur si l'ajout du point échoue (par exemple, si les coordonnées sont hors limites)
-                message_error_manuel.textContent = 'Erreur : ' + error.message;
+            } catch (error) {
+                // Si y'a un souci (ex: hors bornes), on vide tout et on affiche l'erreur
+                // resetInputSaisieManuel(); // Peut-être pas vider si erreur ? bon on laisse comme avant
+                
+                // clearCanva(); // On efface le dessin si erreur ? un peu radical mais ok
+                
+                message_error_manuel.textContent = 'Erreur lors de l\'ajout : ' + error.message;
             }
 
         } else {
-            // Afficher une erreur si le format est incorrect (bien que ce cas soit déjà géré en amont)
-            message_error_manuel.textContent = "Erreur : Coordonnées invalides.";
-            clearCanva()
+            message_error_manuel.textContent = "Erreur : Format invalide.";
+            clearCanva();
         }
     });
-
 }
 
 function lectureCoordonneesDrop() {
