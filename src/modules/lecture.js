@@ -51,6 +51,14 @@ function lectureCoordonneesManuel() {
         }
     });
 
+    // Permettre la soumission avec la touche "Entrée"
+    input_coordonnees_manuel.addEventListener("keypress", function(event) {
+        if (event.key === "Enter" && !button_submit_coordonnees_manuel.disabled) {
+            event.preventDefault(); // Empêche le comportement par défaut de la touche "Entrée"
+            button_submit_coordonnees_manuel.click();
+        }
+    });
+
     // Écouteur pour le bouton de soumission des coordonnées
     button_submit_coordonnees_manuel.addEventListener("click", function() {
         // On fait a nouveau une validation pour s'assurer que les coordonnées sont correctes avant de les afficher (possible manipulation de l'utilisateur)
@@ -94,29 +102,72 @@ function lectureCoordonneesManuel() {
 
 }
 
-function lectureCoordonneesFichier() {
+function lectureCoordonneesDrop() {
+    const dropZone = document.getElementById("drop_zone");
+    const fileInput = document.getElementById("file_input");
+    const message_error_fichier = document.getElementById("message_error_fichier");
 
-    let input_fichier_coordonnees = document.getElementById("coordonnees_fichier");
-    let message_error_fichier = document.getElementById("message_error_fichier");
+    // --- Hover pour le drag ---
+    dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.classList.add("hover");
+    });
 
-    function traiterContenuFichier(contenu) {
+    dropZone.addEventListener("dragleave", (e) => {
+        dropZone.classList.remove("hover");
+    });
+
+    // --- Drop ---
+    dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.classList.remove("hover");
+        handleFile(e.dataTransfer.files[0]);
+    });
+
+    fileInput.addEventListener("change", (e) => {
+        if (fileInput.files.length > 0) {
+            handleFile(fileInput.files[0]);
+            fileInput.value = ""; // reset pour pouvoir recharger le même fichier
+        }
+    });
+
+    // --- Fonction centrale pour traiter un fichier ---
+    function handleFile(file) {
+        // Réinitialiser l'affichage et les messages d'erreur
+        clearCollection(affichage_coordonnees);
         message_error_fichier.textContent = "";
 
-        try{
-            const lignes = contenu.split("\n");
+        if (!file) return;
 
+        try {
+            validationFichier(file);
+        } catch (error) {
+            message_error_fichier.textContent = error.message;
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const contenu = e.target.result;
+            traiterContenuFichier(contenu);
+        };
+        reader.onerror = () => {
+            message_error_fichier.textContent = "Erreur lors de la lecture du fichier.";
+        };
+        reader.readAsText(file);
+    }
+
+    // --- Fonction qui parse le contenu (ton code actuel) ---
+    function traiterContenuFichier(contenu) {
+        try {
+            const lignes = contenu.split("\n");
             lignes.forEach((ligne, index) => {
                 const trimmed = ligne.trim();
-
                 if (trimmed === "") throw Error("Le fichier contient des lignes vides.");
 
                 const parties = trimmed.split(",");
-
-                let match = validationCoordonneeRegex(trimmed);
-
-                if (!match) {
-                    throw Error(`ligne ${index + 1} : format invalide`);
-                }
+                const match = validationCoordonneeRegex(trimmed);
+                if (!match) throw Error(`ligne ${index + 1} : format invalide`);
 
                 const x = parseFloat(parties[0]);
                 const y = parseFloat(parties[1]);
@@ -127,47 +178,15 @@ function lectureCoordonneesFichier() {
                 affichage_coordonnees.appendChild(li);
             });
 
-            // Mettre à jour le dessin du diagramme de Voronoï
-            getDessinVoronoi()
-        }
-        catch (error) {
+            getDessinVoronoi();
+        } catch (error) {
             message_error_fichier.textContent = `Erreur dans le fichier : ${error.message}`;
-            clearCollection(affichage_coordonnees)
-            clearCanva()
+            clearCollection(affichage_coordonnees);
+            clearCanva();
         }
     }
-
-    function handleFile(event) {
-        // Avant de traiter un nouveau fichier, on réinitialise la collection de points et l'affichage
-        clearCollection(affichage_coordonnees)
-
-        const file = event.target.files[0];
-
-        try{
-            validationFichier(file)
-        }catch (error) {
-            message_error_fichier.textContent = error.message;
-            return;
-        }
-
-        const reader = new FileReader();
-
-        reader.onload = function(e) {
-            const contenu = e.target.result;
-            traiterContenuFichier(contenu);
-        };
-
-        reader.onerror = function() {
-            message_error_fichier.textContent = "Erreur lors de la lecture du fichier.";
-        };
-
-        reader.readAsText(file);
-    }
-
-    input_fichier_coordonnees.addEventListener("change", handleFile);
-
 }
 
 lectureCoordonneesManuel()
 
-lectureCoordonneesFichier()
+lectureCoordonneesDrop();

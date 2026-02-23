@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SAE 6 - Diagramme de Vonoroï</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
 </head>
 <body>
     <h1>SAE 6 - Diagramme de Voronoï</h1>
@@ -20,7 +21,10 @@
 
     <br>
     <label>Fichier de coordonnées :
-        <input type="file" id="coordonnees_fichier" accept=".txt"/>
+        <div id="drop_zone">
+            Cliquez ou glissez votre fichier .txt ici
+            <input type="file" id="file_input" accept=".txt" style="display:none">
+        </div>
     </label>
     <p id="message_error_fichier"></p>
 
