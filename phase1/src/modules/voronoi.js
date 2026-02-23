@@ -23,9 +23,13 @@ export default class VoronoiDiagram {
             ctx.beginPath();
             this.voro.renderCell(i, ctx);
 
-            const r = Math.floor((p.x / ctx.canvas.width) * 255);
-            const b = Math.floor((p.y / ctx.canvas.height) * 255);
-            ctx.fillStyle = `rgb(${r}, 120, ${b})`; // 120 ça rend pas mal
+            // couleur aléatoire à chaque fois, ça sera plus funky
+            // Je prends des nombres random entre 0 et 255
+            const r = Math.floor(Math.random() * 255);
+            const g = Math.floor(Math.random() * 255);
+            const b = Math.floor(Math.random() * 255);
+            
+            ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
             ctx.fill();
 
             ctx.strokeStyle = "#000";
