@@ -1,3 +1,4 @@
+import "./export.js"
 import {getDessinVoronoi,clearCanva} from "./rendu.js";
 import {clearCollection, setPointIntoCollection} from "./parsing.js";
 import {validationFichier, validationCoordonneeRegex} from "../utils/validation.js";

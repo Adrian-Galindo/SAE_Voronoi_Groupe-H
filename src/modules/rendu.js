@@ -12,6 +12,8 @@ export function clearCanva() {
 export function getDessinVoronoi() {
     const points = collectionPoints.getPoints();
 
+    message_export_error.textContent = ""; // on efface les messages d'erreur d'export à chaque nouveau dessin
+
     // Calcul
     voronoi.compute(points, canvas.width, canvas.height);
     // Dessin
