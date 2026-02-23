@@ -96,11 +96,7 @@ function lectureCoordonneesManuel() {
                 resetInputSaisieManuel();
 
             } catch (error) {
-                // Si y'a un souci (ex: hors bornes), on vide tout et on affiche l'erreur
-                // resetInputSaisieManuel(); // Peut-être pas vider si erreur ? bon on laisse comme avant
-                
-                // clearCanva(); // On efface le dessin si erreur ? un peu radical mais ok
-                
+                                
                 message_error_manuel.textContent = 'Erreur lors de l\'ajout : ' + error.message;
             }
 
