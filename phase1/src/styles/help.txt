@@ -1,1 +1,0 @@
-Le Css et autre (bootstrap, etc) sont dans le dossier "public" et sont accessibles via l'url "/css/nom_du_fichier.css". Par exemple, pour accéder à "public/css/style.css"

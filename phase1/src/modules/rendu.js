@@ -19,3 +19,24 @@ export function getDessinVoronoi() {
     // Dessin
     voronoi.draw(ctx);
 }
+
+export function resizeCanvas() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+
+    canvas.width = rect.width;
+    canvas.height = rect.height;
+
+    // Redessiner après resize
+    redraw();
+}
+
+function redraw() {
+    const points = collectionPoints.getPoints();
+
+    if (points.length === 0) return;
+
+    clearCanva();
+
+    voronoi.compute(points, canvas.width, canvas.height);
+    voronoi.draw(ctx);
+}

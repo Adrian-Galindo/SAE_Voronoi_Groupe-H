@@ -1,5 +1,5 @@
 import "./export.js"
-import {getDessinVoronoi,clearCanva} from "./rendu.js";
+import {getDessinVoronoi,clearCanva, resizeCanvas} from "./rendu.js";
 import {clearCollection, collectionPoints, setPointIntoCollection} from "./parsing.js";
 import {validationFichier, validationCoordonneeRegex} from "../utils/validation.js";
 
@@ -52,9 +52,9 @@ function lectureCoordonneesManuel() {
     });
 
     // Permettre la soumission avec la touche "Entrée"
-    input_coordonnees_manuel.addEventListener("keypress", function(event) {
+    input_coordonnees_manuel.addEventListener("keydown", function(event) {
         if (event.key === "Enter" && !button_submit_coordonnees_manuel.disabled) {
-            event.preventDefault(); // Empêche le comportement par défaut de la touche "Entrée"
+            event.preventDefault();
             button_submit_coordonnees_manuel.click();
         }
     });
@@ -206,3 +206,16 @@ lectureCoordonneesManuel()
 lectureCoordonneesDrop();
 
 lectureResetPoint()
+
+// Redraw uniquement quand l’utilisateur a fini de redimensionner.
+let resizeTimeout;
+
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        resizeCanvas();
+    }, 150);
+});
+
+// Appel initial pour s'assurer que le canvas est à la bonne taille dès le départ
+resizeCanvas();

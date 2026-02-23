@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86c76910-e8ba-4846-b37d-3731f3a0f6ec" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/g4l1n/Downloads/Uni_Exos/BUT 3 - Redoublement/SAE/diagramme_Voronoi" value="39n3C0GQjyMkPjm9M1D6fiZZjKr" />
+    </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Adrian-Galindo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Adrian-Galindo/diagramme_Voronoi.git&quot;,
+    &quot;accountId&quot;: &quot;24bb4960-8976-4e63-9d3c-6bbb1ae3f46b&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="39n3C0GQjyMkPjm9M1D6fiZZjKr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Jest.All Tests.executor": "Run",
+    "Jest.Classe Point (1).executor": "Run",
+    "Jest.Classe Point.Création d\\'un instance de Point.executor": "Run",
+    "Jest.Classe Point.Création d\\'un point avec des entiers positives.executor": "Debug",
+    "Jest.Classe Point.Création d\\'un point avec des valeurs non numériques.executor": "Run",
+    "Jest.Classe Point.Création d\\'un point avec des valeurs négatives.executor": "Run",
+    "Jest.Classe Point.Création valide d'un point.executor": "Run",
+    "Jest.Classe Point.Créer une instance de Point avec une seule coordonnée.executor": "Run",
+    "Jest.Classe Point.Créer une instance de Point.executor": "Run",
+    "Jest.Classe Point.executor": "Run",
+    "Jest.Classe Point.setX avec une valeur negative.executor": "Run",
+    "Jest.Classe Point.setX, setY avec des valeurs non numériques.executor": "Run",
+    "Jest.Classe Point.setX, setY avec un float.executor": "Run",
+    "Jest.Classe Point.setX, setY avec une valeur negative.executor": "Run",
+    "Jest.Classe PointCollection.Ajouter un point différent fonctionne.executor": "Run",
+    "Jest.Classe PointCollection.Ajouter un point qui n'est pas une instance de Point.executor": "Run",
+    "Jest.Classe PointCollection.Ajouter un point à la collection.executor": "Debug",
+    "Jest.Classe PointCollection.Obtenir tous les points de la collection.executor": "Debug",
+    "Jest.Classe PointCollection.Supprimer avec un ID non numérique lève une erreur.executor": "Run",
+    "Jest.Classe PointCollection.Supprimer un point par son ID.executor": "Run",
+    "Jest.Classe PointCollection.executor": "Run",
+    "Jest.Lecture test.Lecture d'un fichier.executor": "Run",
+    "Jest.Lecture test.executor": "Run",
+    "Jest.Point.executor": "Run",
+    "Jest.Point.test.js.executor": "Run",
+    "Jest.PointCollection.test.js.executor": "Run",
+    "Jest.création valide.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js Test Runner.Création d'un point valide.executor": "Run",
+    "Node.js Test Runner.création valide.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/g4l1n/Downloads/Uni_Exos/BUT 3 - Redoublement/SAE/diagramme_Voronoi/tests",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "C:/Users/g4l1n/Downloads/Uni_Exos/BUT 3 - Redoublement/SAE/diagramme_Voronoi/node_modules/jest",
+    "nodejs_package_manager_path": "npm",
+    "npm.test.executor": "Run",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.3257143",
+    "settings.editor.selected.configurable": "preferences.applicationServers",
+    "ts.external.directory.path": "C:\\Users\\g4l1n\\AppData\\Roaming\\JetBrains\\IntelliJIdea2025.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\g4l1n\Downloads\Uni_Exos\BUT 3 - Redoublement\SAE\diagramme_Voronoi\tests" />
+      <recent name="C:\Users\g4l1n\Downloads\Uni_Exos\BUT 3 - Redoublement\SAE\diagramme_Voronoi\src\exemple" />
+      <recent name="C:\Users\g4l1n\Downloads\Uni_Exos\BUT 3 - Redoublement\SAE\diagramme_Voronoi\src\models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\g4l1n\Downloads\Uni_Exos\BUT 3 - Redoublement\SAE\diagramme_Voronoi\tests" />
+      <recent name="C:\Users\g4l1n\Downloads\Uni_Exos\BUT 3 - Redoublement\SAE\diagramme_Voronoi\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.Lecture test">
+    <configuration name="Classe Point.Création d\'un point avec des valeurs négatives" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/Point.test.js" />
+      <test-names>
+        <test-name value="Classe Point" />
+        <test-name value="Création d\'un point avec des valeurs négatives" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Classe Point.Créer une instance de Point avec une seule coordonnée" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/Point.test.js" />
+      <test-names>
+        <test-name value="Classe Point" />
+        <test-name value="Créer une instance de Point avec une seule coordonnée" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Classe Point.Créer une instance de Point" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/Point.test.js" />
+      <test-names>
+        <test-name value="Classe Point" />
+        <test-name value="Créer une instance de Point" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Lecture test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/Lecture.test.js" />
+      <test-names>
+        <test-name value="Lecture test" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Lecture test.Lecture d'un fichier" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/Lecture.test.js" />
+      <test-names>
+        <test-name value="Lecture test" />
+        <test-name value="Lecture d'un fichier" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Jest.Lecture test" />
+      <item itemvalue="Jest.Lecture test.Lecture d'un fichier" />
+      <item itemvalue="Jest.Classe Point.Création d\'un point avec des valeurs négatives" />
+      <item itemvalue="Jest.Classe Point.Créer une instance de Point" />
+      <item itemvalue="Jest.Classe Point.Créer une instance de Point avec une seule coordonnée" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Lecture test" />
+        <item itemvalue="Jest.Lecture test.Lecture d'un fichier" />
+        <item itemvalue="Jest.Classe Point.Créer une instance de Point avec une seule coordonnée" />
+        <item itemvalue="Jest.Classe Point.Création d\'un point avec des valeurs négatives" />
+        <item itemvalue="Jest.Classe Point.Créer une instance de Point" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28539.33" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28539.33" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86c76910-e8ba-4846-b37d-3731f3a0f6ec" name="Changes" comment="" />
+      <created>1771317876083</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771317876083</updated>
+      <workItem from="1771317877785" duration="22691000" />
+      <workItem from="1771506809330" duration="832000" />
+      <workItem from="1771508057086" duration="11451000" />
+      <workItem from="1771788674006" duration="5540000" />
+      <workItem from="1771834697730" duration="9912000" />
+      <workItem from="1771876794681" duration="2652000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

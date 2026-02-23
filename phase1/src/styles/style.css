@@ -18,8 +18,6 @@ html, body {
     overflow: hidden;        
 }
 
-
-
 #page_block {
     flex: 1;
     background-color: #21293b;
@@ -36,6 +34,14 @@ html, body {
     background-color: #21293b;
     border-radius: 10px;
     box-sizing: border-box;
+    display: flex;
+}
+
+#canvas {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
 .titre_block{
