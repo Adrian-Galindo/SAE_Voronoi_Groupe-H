@@ -14,9 +14,11 @@ html, body {
     padding: 10px;
     flex-direction: row;
     justify-content: space-between;
-    box-sizing: border-box; /* inclut le padding dans les dimensions */
-    overflow: hidden;        /* empêche le scroll */
+    box-sizing: border-box; 
+    overflow: hidden;        
 }
+
+
 
 #page_block {
     flex: 1;
@@ -43,9 +45,9 @@ html, body {
 
 .blocks_saisie{
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 10px; 
     display: flex;
-    gap: 30px;
+    gap: 15px;
 }
 
 .btn_classique{
@@ -68,9 +70,13 @@ html, body {
     color: white;
 }
 
+#coordonnees_manuel {
+    border-radius: 5px;
+}
+
 #drop_zone {
     width: 100%;
-    height: 100px;
+    height: 70px;
     border: 2px dashed rgb(62, 69, 87);
     border-radius: 10px;
     display: flex;
@@ -85,4 +91,150 @@ html, body {
     background-color: #f0f0f0;
     border-color: #333;
     color: #000;
+}
+
+
+details {
+    margin-bottom: 20px;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 14px;
+    color: #ccc;
+    text-decoration: underline; 
+}
+
+
+/*le  popup au milieu */
+details[open] #affichage_coordonnees {
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    background-color: #21293b;
+    border: 2px solid white;
+    box-shadow: 0 0 20px black; 
+    
+    padding: 20px;
+    z-index: 9999;
+    overflow-y: auto; 
+    
+    display: block; 
+}
+
+
+details:not([open]) #affichage_coordonnees {
+    display: none;
+} 
+
+
+/* Creatlydev sur Uiverse.io by  (Bouton export) */ 
+.button {
+  line-height: normal; 
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.75em 1em;
+  padding-right: 1.25em;
+  color: #fff;
+  border: 1px solid transparent;
+  font-weight: 700;
+  border-radius: 2em;
+  font-size: 1rem;
+  box-shadow: 0 0.7em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+  transition: transform 0.3s;
+  
+  outline: none;
+  font-family: inherit;
+
+  background: linear-gradient(
+    90deg,
+    #292f41 0%, 
+    #3e4658 100%
+  );
+  
+  padding: 0.5em 0.8em;
+  font-size: 0.9rem;
+}
+
+.button__icon {
+  width: 1.2em; 
+  height: 1.2em;
+  flex-shrink: 0; 
+}
+
+.button:hover {
+  border-color: #f4f5f2;
+}
+
+.button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0.5em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+}
+
+/* Uiverse.io pour le css du titre */ 
+.titre_projet {
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 16px;
+  border: none;
+  padding: 2px;
+  background: radial-gradient(circle 80px at 80% -10%, #ffffff, #181b1b);
+  position: relative;
+}
+.titre_projet::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 60%;
+  border-radius: 120px;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 20px #ffffff38;
+  z-index: -1;
+}
+
+.blob1 {
+  position: absolute;
+  width: 70px;
+  height: 100%;
+  border-radius: 16px;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #3fe9ff,
+    #0000ff80,
+    transparent
+  );
+  box-shadow: -10px 10px 30px #0051ff2d;
+}
+
+.inner {
+  padding: 14px 25px;
+  border-radius: 14px;
+  color: #fff;
+  z-index: 3;
+  position: relative;
+  background: radial-gradient(circle 80px at 80% -50%, #777777, #0f1111);
+}
+.inner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #00e1ff1a,
+    #0000ff11,
+    transparent
+  );
+  position: absolute;
 }

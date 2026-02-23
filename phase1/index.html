@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <title>SAE 6 - Diagramme de Vonoroï</title>
     <link rel="stylesheet" href="./src/styles/style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Beastly&display=swap" rel="stylesheet"></head>
 <body>
     <div id="container">
         <div id="page_block">
-            <h1>SAE 6 - Diagramme de Voronoï</h1>
+            <h1 class="titre_projet"> <div class="blob1"></div>
+                        <div class="blob2"></div>
+                        <div class="inner">SAE 6 - Diagramme de Voronoï </div>
+            </h1>
+           
             <p>Ce projet a été réalisé par :</p>
             <ul>
                 <li>Adrian GALINDO</li>
-                <li>...</li>
+                <li>Diop Mouhammed</li>
             </ul>
 
             <div class="blocks_saisie">
@@ -21,7 +27,7 @@
                     <button class="btn_classique" id="btn_submit_coordonnees_manuel" disabled>Ajouter</button>
                 </label>
 
-                <label class="titre_block">Imports de fichiers
+                <label class="titre_block ">Imports de fichiers
                     <div id="drop_zone">
                         Cliquez ou glissez votre fichier .txt ici
                         <input type="file" id="file_input" accept=".txt" style="display:none">
@@ -33,10 +39,37 @@
             <p id="message_error_fichier"></p>
             <p id="message_export_error"></p>
 
-            <ul id="affichage_coordonnees"></ul>
+            
+            <details>
+                <summary>Voir la liste des points</summary>
+                <ul id="affichage_coordonnees"></ul>
+            </details>
 
-            <button class="btn_classique" id="btn_export_png">Exporter en PNG</button>
-            <button class="btn_classique" id="btn_reset_points">Réinitialiser points</button>
+            <!-- Bouton téléchargé sur Uiverse.io -->
+            <button class="button" id="btn_export_png">
+              <svg
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                height="40"
+                width="40"
+                class="button__icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path fill="none" d="M0 0h24v24H0z" stroke="none"></path>
+                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                <path d="M7 11l5 5l5 -5"></path>
+                <path d="M12 4l0 12"></path>
+              </svg>
+              <span class="button__text">Exporter en PNG</span>
+            </button>
+            
+            <button class="button" id="btn_reset_points" style="margin-top: 10px;">
+                <span class="button__text">Réinitialiser points</span>
+            </button>
 
         </div>
         <div id="diagramme_block">
