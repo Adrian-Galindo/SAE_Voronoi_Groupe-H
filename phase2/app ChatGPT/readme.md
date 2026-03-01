@@ -5,93 +5,92 @@
 
 ## PRÉREQUIS
 ------------------------------------------------------------
-• Python 3.10 ou plus récent
-• pip installé
-• Système : Windows / Linux / Mac
+- Python 3.10 ou plus récent
+- pip installé
+- Système : Windows / Linux / Mac
 
-Vérifier Python :
-    python --version
-
-
-------------------------------------------------------------
-1. TÉLÉCHARGER LE PROJET
-------------------------------------------------------------
-
-Option 1 – ZIP
-
-• Télécharger le projet
-• Extraire dans un dossier
-
-Option 2 – Git
-    git clone https://github.com/Adrian-Galindo/diagramme_Voronoi.git
-
+#### Vérifier Python :
+   - python --version
 
 
 ------------------------------------------------------------
-2. ENTRER DANS LE ENVIRONNEMENT VIRTUEL (recommandé)
+### 1. TÉLÉCHARGER LE PROJET
 ------------------------------------------------------------
 
-### Windows :
-   cd '.\phase2\app ChatGPT\'
-   .venv\Scripts\activate
+#### Option 1 – ZIP
+
+- Télécharger le projet
+- Extraire dans un dossier
+
+#### Option 2 – Git
+- git clone https://github.com/Adrian-Galindo/diagramme_Voronoi.git
 
 
 
 ------------------------------------------------------------
-3. INSTALLER LES DÉPENDANCES
+### 2. ENTRER DANS LE ENVIRONNEMENT VIRTUEL (recommandé)
 ------------------------------------------------------------
 
-Si requirements.txt existe :
-    pip install -r requirements.txt
+#### Windows :
+- cd '.\phase2\app ChatGPT\'
+- .venv\Scripts\activate
 
-
-
-------------------------------------------------------------
-4. LANCER L’APPLICATION
-------------------------------------------------------------
-
-Dans le dossier du projet :
-
-    python main.py
-
-Une fenêtre s’ouvre.
-Clique sur "Load points" pour charger un fichier.
 
 
 ------------------------------------------------------------
-5. FORMAT DU FICHIER POINTS
+### 3. INSTALLER LES DÉPENDANCES
 ------------------------------------------------------------
 
-Créer un fichier texte exemple :
+- pip install -r requirements.txt
 
-points.txt
-
-Contenu :
-
-0,0
-10,0
-5,5
-3,8
-
-Puis charger ce fichier dans l’application.
 
 
 ------------------------------------------------------------
-6. EXPORTER UNE IMAGE
+### 4. LANCER L’APPLICATION
 ------------------------------------------------------------
 
-Dans l’application :
-• Cliquer sur "Export"
-• Choisir PNG / JPG / SVG
+#### Dans le dossier du projet :
+
+   - python main.py
+
+- Une fenêtre s’ouvre.
+- Clique sur "Load points" pour charger un fichier.
 
 
 ------------------------------------------------------------
-8. DÉSINSTALLER
+### 5. FORMAT DU FICHIER POINTS
 ------------------------------------------------------------
 
-Supprimer simplement le dossier du projet.
-Si environnement virtuel :
-    deactivate
+#### Créer un fichier texte exemple :
+
+- points.txt
+
+- Contenu :
+
+- 0,0
+- 10,0
+- 5,5
+- 3,8
+
+- Puis charger ce fichier dans l’application.
+
+
+------------------------------------------------------------
+### 6. EXPORTER UNE IMAGE
+------------------------------------------------------------
+
+#### Dans l’application :
+- Cliquer sur "Export"
+- Choisir PNG / JPG / SVG
+
+
+------------------------------------------------------------
+#### 8. DÉSINSTALLER
+------------------------------------------------------------
+
+- Supprimer simplement le dossier du projet.
+- Si environnement virtuel :
+   - deactivate
 
 
 ============================================================
