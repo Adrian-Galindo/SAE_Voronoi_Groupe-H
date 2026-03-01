@@ -5,11 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbce937b-16b6-4d59-bbb6-e39278211a9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/phase1/src/exemple/coordonnees2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phase1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/phase1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phase1/src/modules/rendu.js" beforeDir="false" afterPath="$PROJECT_DIR$/phase1/src/modules/rendu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phase1/src/modules/voronoi.js" beforeDir="false" afterPath="$PROJECT_DIR$/phase1/src/modules/voronoi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/Journal_bord_IA.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/core/parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/core/voronoi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/data/circle_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/data/cluster_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/data/fichiers_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/export/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/export/image_exporter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/export/svg_exporter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/tests/test_export.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/tests/test_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/tests/test_voronoi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/ui/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/ui/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/ui/canvas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/App_phase2_claude_IA/voronoi_app/ui/toolbar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/.idea/SAE_601.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/Test ia - ChatGPT.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/app/exporter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/app/gui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/app/io_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/app/voronoi_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/out.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/out2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/out3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/out4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/out5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/out6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/out7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/tests/test_integration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/tests/test_io.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase2/app ChatGPT/tests/test_voronoi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phase3_individuel/Maxime lointier -risque société.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phase1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/phase1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phase2/app github copilot (claude sonnet 4.5)/Test ia - github copilot.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/phase2/app github copilot (claude sonnet 4.5)/Test ia - github copilot.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +68,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "last_opened_file_path": "C:/Users/g4l1n/Downloads/Uni_Exos/BUT 3 - Redoublement/SAE/diagramme_Voronoi/phase1/src/exemple",
     "node.js.selected.package.tslint": "(autodetect)"
   }

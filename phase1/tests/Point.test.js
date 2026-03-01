@@ -1,4 +1,4 @@
-const Point = require("./models/Point.js");
+import Point from "../src/models/point.js";
 
 describe("Classe Point", () => {
 
