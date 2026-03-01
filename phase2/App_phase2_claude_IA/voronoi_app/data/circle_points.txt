@@ -1,0 +1,36 @@
+# Fichier de test — deux anneaux concentriques + centre
+# Anneau extérieur (rayon 4) : délimite la zone
+# Anneau intérieur (rayon 2, décalé de 15°) : régions finies
+# Centre : région finie centrale
+# Format : x,y  (une paire par ligne)
+
+# ── Centre ─────────────────────────────────────────────────────
+5.0,5.0
+
+# ── Anneau intérieur — rayon 2, pas 30°, décalage 15° ─────────
+6.93,5.52
+6.41,6.41
+5.52,6.93
+4.48,6.93
+3.59,6.41
+3.07,5.52
+3.07,4.48
+3.59,3.59
+4.48,3.07
+5.52,3.07
+6.41,3.59
+6.93,4.48
+
+# ── Anneau extérieur — rayon 4, pas 30° ───────────────────────
+9.0,5.0
+8.46,7.0
+7.0,8.46
+5.0,9.0
+3.0,8.46
+1.54,7.0
+1.0,5.0
+1.54,3.0
+3.0,1.54
+5.0,1.0
+7.0,1.54
+8.46,3.0

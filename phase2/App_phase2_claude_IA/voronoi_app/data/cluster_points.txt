@@ -1,0 +1,40 @@
+# Fichier de test — 3 clusters rapprochés + points de liaison
+# Les points de liaison entre clusters créent des régions finies
+# Format : x,y  (une paire par ligne)
+
+# ── Cluster A — haut gauche ────────────────────────────────────
+2.0,8.0
+2.5,8.6
+1.5,7.5
+3.0,7.8
+2.2,9.0
+
+# ── Cluster B — bas droite ─────────────────────────────────────
+8.0,2.0
+8.5,1.5
+7.5,2.5
+9.0,2.8
+8.2,1.2
+
+# ── Cluster C — centre ─────────────────────────────────────────
+4.8,5.0
+5.3,5.5
+5.0,4.5
+4.4,5.3
+5.6,4.8
+
+# ── Points de liaison A-C ──────────────────────────────────────
+3.2,6.8
+3.8,6.2
+4.2,5.8
+
+# ── Points de liaison B-C ──────────────────────────────────────
+6.8,3.2
+6.2,3.8
+5.8,4.2
+
+# ── Points de liaison A-B (diagonale) ─────────────────────────
+3.8,7.2
+5.0,6.0
+6.2,4.8
+7.2,3.8

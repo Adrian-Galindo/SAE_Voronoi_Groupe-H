@@ -140,5 +140,8 @@ Projet réalisé par :
 Adrian GALINDO
 Bharani RATTINASSABABADY 
 Mouhammed Diop
+Anouar ROUIBI
+Maxime LOINTIER
+Huy PHAM
 
 ---
