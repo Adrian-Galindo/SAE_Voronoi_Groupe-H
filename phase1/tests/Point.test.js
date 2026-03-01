@@ -78,11 +78,14 @@ describe("Classe Point", () => {
     });
 
     test("setX, setY modifie correctement les valeurs", () => {
+        // Arrange
         const p = new Point(10, 20);
 
+        // Act
         p.setX(15.5);
         p.setY(25.5);
 
+        // Assert
         expect(p.getX()).toBe(15.5);
         expect(p.getY()).toBe(25.5);
     });
