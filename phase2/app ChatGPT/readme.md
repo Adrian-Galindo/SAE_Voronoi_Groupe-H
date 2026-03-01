@@ -1,9 +1,9 @@
-============================================================
-INSTALLATION – VORONOI DIAGRAM GENERATOR
-Projet BUT Informatique – Pham Huy
-============================================================
 
-PRÉREQUIS
+# INSTALLATION – VORONOI DIAGRAM GENERATOR
+## Projet BUT Informatique – Pham Huy
+
+
+## PRÉREQUIS
 ------------------------------------------------------------
 • Python 3.10 ou plus récent
 • pip installé
@@ -18,6 +18,7 @@ Vérifier Python :
 ------------------------------------------------------------
 
 Option 1 – ZIP
+
 • Télécharger le projet
 • Extraire dans un dossier
 
@@ -30,7 +31,7 @@ Option 2 – Git
 2. ENTRER DANS LE ENVIRONNEMENT VIRTUEL (recommandé)
 ------------------------------------------------------------
 
-Windows :
+### Windows :
    cd '.\phase2\app ChatGPT\'
    .venv\Scripts\activate
 
