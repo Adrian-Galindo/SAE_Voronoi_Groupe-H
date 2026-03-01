@@ -10,9 +10,12 @@ export default class VoronoiDiagram {
     compute(liste, w, h) {
         if (!liste || liste.length === 0) return;
 
-        this.points = liste;
+        // inverser Y pour avoir 0 en bas
+        const inverted = liste.map(p => ({ x: p.x, y: h - p.y }));
 
-        const d = Delaunay.from(liste, p => p.x, p => p.y);
+        this.points = inverted;
+
+        const d = Delaunay.from(inverted, p => p.x, p => p.y);
         this.voro = d.voronoi([0, 0, w, h]);
 
         // Générer les couleurs UNE SEULE FOIS si nécessaire
